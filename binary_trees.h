@@ -55,12 +55,13 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
-
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 /* helper functions */
 int _pow_recursion(int x, int y);
 size_t binary_tree_size(const binary_tree_t *tree);
 size_t binary_tree_height(const binary_tree_t *tree);
-
+void btlo_helper(const binary_tree_t *tree, void (*func)(int), size_t level);
+size_t binary_tree_height(const binary_tree_t *tree);
 
 #endif
